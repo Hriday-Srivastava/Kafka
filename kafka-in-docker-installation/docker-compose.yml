@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  zookeeper-service:
+    image: wurstmeister/zookeeper
+    container_name: zookeep-container
+    ports:
+      - "2181:2181"
+
+  kafka-service:
+    image: wurstmeister/kafka
+    container_name: kafka-container
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ZOOKEEPER_CONNECT: zookeep-container:2181
