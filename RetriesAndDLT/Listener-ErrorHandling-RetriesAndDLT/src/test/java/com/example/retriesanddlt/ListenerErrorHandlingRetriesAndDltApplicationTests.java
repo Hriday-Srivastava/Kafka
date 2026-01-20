@@ -1,0 +1,13 @@
+package com.example.retriesanddlt;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ListenerErrorHandlingRetriesAndDltApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
